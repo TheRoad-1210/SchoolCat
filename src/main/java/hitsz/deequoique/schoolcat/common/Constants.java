@@ -2,7 +2,7 @@ package hitsz.deequoique.schoolcat.common;
 
 /**
  * @author deequoique
- * 常量
+ * 返回值常量
  */
 public interface Constants {
     /**

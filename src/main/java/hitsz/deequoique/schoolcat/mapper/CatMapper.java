@@ -12,8 +12,8 @@ import java.util.List;
  */
 @Mapper
 public interface CatMapper {
-    @Select("SELECT cat_id as id, cat_name as name,cat_sex as sex,cat_describe as describe\n" +
-            "cat_kind as kind,cat_status as status,cat_breed as breed, cat_picture as picture \n" +
-            "from cat;")
+    @Select("SELECT cat_id as id, cat_name as name,cat_sex as sex,cat_describe as catDescribe,\n" +
+            " cat_kind as kind,cat_status as status,cat_breed as breed, cat_picture as picture\n" +
+            " from cat;")
     List<Cat> findAll();
 }

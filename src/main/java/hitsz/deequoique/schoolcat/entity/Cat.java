@@ -3,7 +3,6 @@ package hitsz.deequoique.schoolcat.entity;
 import lombok.Data;
 
 import java.math.BigDecimal;
-import java.sql.Blob;
 
 /**
  * @author deequoique
@@ -13,8 +12,10 @@ public class Cat {
      private BigDecimal id;
      private String name;
      private boolean sex;
-     private Integer kind;
+     private String kind;
      private boolean breed;
-     private Blob picture;
-     private String describe;
+     private byte[] picture;
+     private String catDescribe;
+     private int status;
+
 }
