@@ -13,9 +13,9 @@ import java.util.List;
  */
 @Mapper
 public interface UserMapper {
-    @Select("SELECT user_id as id, user_code as password, user_status as status from user")
+    @Select("SELECT * from user")
     List<User> findAll();
 
-    @Insert("INSERT INTO user VALUES (#{id},#{password},#{status})")
+    @Insert("INSERT INTO user VALUES (#{id},#{password},#{power})")
     int insert(User user);
 }

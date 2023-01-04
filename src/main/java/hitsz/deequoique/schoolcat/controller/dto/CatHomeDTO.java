@@ -12,5 +12,5 @@ public class CatHomeDTO {
     private BigDecimal id;
     private String name;
     private byte[] picture;
-    private String catDescribe;
+    private String txt;
 }

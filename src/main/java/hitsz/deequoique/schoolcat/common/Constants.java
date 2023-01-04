@@ -22,4 +22,6 @@ public interface Constants {
      * 密码错误
      */
     String CODE_403 = "403";
+    int TRUE = 1;
+    int FALSE = 0;
 }

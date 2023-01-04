@@ -13,15 +13,8 @@ import java.util.List;
  */
 @Mapper
 public interface CatMapper {
-    @Select("SELECT cat_id as id, cat_name as name,cat_sex as sex,cat_describe as catDescribe,\n" +
-            " cat_kind as kind,cat_status as status,cat_breed as breed, cat_picture as picture\n" +
-            " from cat;")
-    List<Cat> findAll();
-    @Select("SELECT cat_id as id, cat_name as name,cat_describe as catDescribe,\n" +
-            " cat_picture as picture from cat;")
+    @Select("SELECT id, name, txt, picture from cat;")
     List<CatHomeDTO> findHome();
-    @Select("SELECT cat_id as id, cat_name as name,cat_sex as sex,cat_describe as catDescribe,\n" +
-            " cat_kind as kind,cat_status as status,cat_breed as breed, cat_picture as picture\n" +
-            " from cat where cat_id=#{id};")
+    @Select("SELECT * from cat where id=#{id};")
     Cat find(String id);
 }
