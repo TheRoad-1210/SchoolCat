@@ -6,6 +6,7 @@ import hitsz.deequoique.schoolcat.controller.dto.record.MealRecordGetDTO;
 import hitsz.deequoique.schoolcat.entity.Food;
 import hitsz.deequoique.schoolcat.mapper.FoodMapper;
 import hitsz.deequoique.schoolcat.mapper.MealMapper;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -14,6 +15,7 @@ import java.util.List;
 /**
  * @author deequoique
  */
+@Slf4j
 @RestController
 @RequestMapping("/meal")
 public class MealController {
@@ -31,9 +33,13 @@ public class MealController {
         if (foods.isEmpty()){
             foodMapper.insert(new Food(meal.getBrand(), meal.getCategory()));
             foods = foodMapper.find(meal.getCategory(),meal.getBrand());
+            log.info(String.valueOf(foods.size()));
         }
-        mealMapper.insert(new MealRecordDTO(foods.get(0).getId(),
-                meal.getCat(), meal.getUserId(),meal.getLocation()));
+//        log.info("食物id"+foods.get(0).getId()+
+//                "猫id"+meal.getCat()+ "userid"+meal.getUserId()+"位置"+meal.getLocation());
+        MealRecordDTO mealRecordDTO = new MealRecordDTO(foods.get(0).getId(),
+                meal.getCat(), meal.getUserId(),meal.getLocation());
+        mealMapper.insert(mealRecordDTO);
         return Result.success();
     }
 }

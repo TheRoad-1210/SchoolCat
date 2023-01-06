@@ -19,8 +19,8 @@ public interface FoodMapper {
      * @return          食物id
      */
     @Select("SELECT id, category_id as category, brand_id as brand from food " +
-            "where brand_id = #{brand} && food.category_id = #{category}")
+            "where food.category_id = #{category} && brand_id = #{brand}")
     List<Food> find(int category, int brand);
-    @Insert("INSERT INTO food( category_id, brand_id) values (#{brand},#{category})")
+    @Insert("INSERT INTO food( category_id, brand_id) values (#{category},#{brand})")
     int insert(Food food);
 }

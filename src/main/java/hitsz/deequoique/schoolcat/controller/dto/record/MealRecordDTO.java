@@ -12,7 +12,7 @@ import lombok.Data;
 public class MealRecordDTO {
     private int food;
     private int cat;
-    private int userId;
+    private String userId;
     private String location;
 
 }

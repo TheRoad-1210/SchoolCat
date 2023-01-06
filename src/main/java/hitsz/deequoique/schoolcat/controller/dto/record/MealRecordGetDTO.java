@@ -10,6 +10,6 @@ public class MealRecordGetDTO {
     private int category;
     private int brand;
     private int cat;
-    private int userId;
+    private String userId;
     private String location;
 }
