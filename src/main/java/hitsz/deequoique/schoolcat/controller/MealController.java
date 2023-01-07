@@ -18,6 +18,7 @@ import java.util.List;
 @Slf4j
 @RestController
 @RequestMapping("/meal")
+@CrossOrigin
 public class MealController {
     @Autowired
     private MealMapper mealMapper;

@@ -17,6 +17,7 @@ import java.util.List;
 @Slf4j
 @RestController
 @RequestMapping("/activity")
+@CrossOrigin
 public class ActivityController {
     @Autowired
     private ActivityMapper activityMapper;

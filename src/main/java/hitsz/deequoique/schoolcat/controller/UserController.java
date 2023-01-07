@@ -5,7 +5,6 @@ import hitsz.deequoique.schoolcat.common.Result;
 import hitsz.deequoique.schoolcat.controller.dto.UserDTO;
 import hitsz.deequoique.schoolcat.entity.User;
 import hitsz.deequoique.schoolcat.mapper.UserMapper;
-import org.apache.tomcat.util.bcel.Const;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -18,6 +17,7 @@ import java.util.Objects;
  */
 @RestController
 @RequestMapping("/user")
+@CrossOrigin
 public class UserController {
     @Autowired
     private UserMapper userMapper;

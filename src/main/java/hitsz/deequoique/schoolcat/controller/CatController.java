@@ -5,10 +5,7 @@ import hitsz.deequoique.schoolcat.controller.dto.CatHomeDTO;
 import hitsz.deequoique.schoolcat.entity.Cat;
 import hitsz.deequoique.schoolcat.mapper.CatMapper;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -18,6 +15,7 @@ import java.util.List;
  */
 @RestController
 @RequestMapping("/cat")
+@CrossOrigin
 public class CatController {
     @Autowired
     private CatMapper catMapper;
