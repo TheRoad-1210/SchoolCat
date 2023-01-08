@@ -11,6 +11,6 @@ import java.math.BigDecimal;
 public class CatHomeDTO {
     private BigDecimal id;
     private String name;
-    private byte[] picture;
+    private String picture;
     private String txt;
 }
