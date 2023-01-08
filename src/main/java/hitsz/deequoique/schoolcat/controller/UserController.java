@@ -30,21 +30,20 @@ public class UserController {
     @PostMapping("/register")
     public Result register(@RequestBody UserDTO user){
         for (User users:index()){
-            if(users.getId().equals(user.getUserId())){
+            if(users.getId().equals(user.getId())){
                 return Result.error(Constants.CODE_400,"已有该账号");
             }
         }
-        if(!Objects.equals(user.getPassword(), user.getConfig())){
-            return Result.error(Constants.CODE_403,"先后密码不一致");
-        }
-        userMapper.insert(new User(user.getUserId(), user.getPassword(), false));
+
+        userMapper.insert(new User(user.getId(), user.getPassword(), false));
+        userMapper.add(user);
         return Result.success();
     }
 
     @PostMapping("/login")
     public Result login(@RequestBody UserDTO userDTO){
         for (User user:index()){
-            if (user.getId().equals(userDTO.getUserId())){
+            if (user.getId().equals(userDTO.getId())){
                 if(Objects.equals(user.getPassword(), userDTO.getPassword())){
                     return Result.success();
                 }

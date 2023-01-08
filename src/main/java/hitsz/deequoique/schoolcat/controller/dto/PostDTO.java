@@ -10,6 +10,7 @@ public class PostDTO {
     private String userId;
     private String title;
     private String txt;
-    private byte[] image;
+    private String image;
     private String address;
+    private Integer catId;
 }

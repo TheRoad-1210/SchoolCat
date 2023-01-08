@@ -12,5 +12,12 @@ public class User {
     private String id;
     private String password;
     private Boolean power;
+    private String name;
+    private String image;
 
+    public User(String id, String password, Boolean power) {
+        this.id = id;
+        this.password = password;
+        this.power = power;
+    }
 }

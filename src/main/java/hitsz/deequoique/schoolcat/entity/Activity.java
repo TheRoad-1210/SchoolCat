@@ -18,4 +18,5 @@ public class Activity {
     private byte[] image;
     private Timestamp activityTime;
     private String address;
+    private String catName;
 }

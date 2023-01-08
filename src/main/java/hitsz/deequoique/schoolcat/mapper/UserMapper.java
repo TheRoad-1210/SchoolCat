@@ -1,5 +1,6 @@
 package hitsz.deequoique.schoolcat.mapper;
 
+import hitsz.deequoique.schoolcat.controller.dto.UserDTO;
 import hitsz.deequoique.schoolcat.entity.User;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
@@ -18,4 +19,7 @@ public interface UserMapper {
 
     @Insert("INSERT INTO user VALUES (#{id},#{password},#{power})")
     int insert(User user);
+
+    @Insert("INSERT INTO user_info(name,id,image) VALUE (#{name},#{id},#{image})")
+    int add(UserDTO user);
 }
