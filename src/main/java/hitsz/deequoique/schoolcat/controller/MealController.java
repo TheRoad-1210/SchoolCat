@@ -36,11 +36,17 @@ public class MealController {
             foods = foodMapper.find(meal.getCategory(),meal.getBrand());
             log.info(String.valueOf(foods.size()));
         }
-//        log.info("食物id"+foods.get(0).getId()+
-//                "猫id"+meal.getCat()+ "userid"+meal.getUserId()+"位置"+meal.getLocation());
         MealRecordDTO mealRecordDTO = new MealRecordDTO(foods.get(0).getId(),
                 meal.getCat(), meal.getUserId(),meal.getLocation());
         mealMapper.insert(mealRecordDTO);
         return Result.success();
+    }
+    @GetMapping("/get/category")
+    public Result getCategory(){
+        return Result.success(foodMapper.getCategoty());
+    }
+    @GetMapping("/get/brand")
+    public Result getBrand(){
+        return Result.success(foodMapper.getBrand());
     }
 }

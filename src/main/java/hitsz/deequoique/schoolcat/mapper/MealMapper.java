@@ -19,7 +19,8 @@ public interface MealMapper {
             "left join user_info ui on fc.user_id = ui.id " +
             "left join category c on f.category_id = c.id " +
             "left join brand b on f.brand_id = b.id " +
-            "where fc.id = ${id}")
+            "left join cat on fc.cat_id = cat.id "+
+            "where cat.id = ${id}")
     List<MealRecord> record(int id);
     @Insert("INSERT INTO feed_cat(food_id,cat_id,user_id,location) values (#{food},#{cat},#{userId},#{location})")
     int insert(MealRecordDTO mealRecordDTO);

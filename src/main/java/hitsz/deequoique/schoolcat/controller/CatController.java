@@ -1,6 +1,7 @@
 package hitsz.deequoique.schoolcat.controller;
 
 import hitsz.deequoique.schoolcat.common.Result;
+import hitsz.deequoique.schoolcat.controller.dto.CatDetailDTO;
 import hitsz.deequoique.schoolcat.controller.dto.CatHomeDTO;
 import hitsz.deequoique.schoolcat.entity.Cat;
 import hitsz.deequoique.schoolcat.mapper.CatMapper;
@@ -27,6 +28,7 @@ public class CatController {
     @GetMapping("/detail")
     public Result detail(@RequestParam("catId") String catId){
         Cat cat = catMapper.find(catId);
-        return Result.success(cat);
+        CatDetailDTO catDetailDTO = new CatDetailDTO(cat);
+        return Result.success(catDetailDTO);
     }
 }

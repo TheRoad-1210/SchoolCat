@@ -14,7 +14,7 @@ public class Cat {
      private boolean sex;
      private String kind;
      private boolean breed;
-     private byte[] picture;
+     private String picture;
      private String txt;
      private int status;
 

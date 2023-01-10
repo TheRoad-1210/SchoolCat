@@ -1,5 +1,7 @@
 package hitsz.deequoique.schoolcat.mapper;
 
+import hitsz.deequoique.schoolcat.controller.dto.BrandDTO;
+import hitsz.deequoique.schoolcat.controller.dto.CategoryDTO;
 import hitsz.deequoique.schoolcat.entity.Food;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
@@ -23,4 +25,8 @@ public interface FoodMapper {
     List<Food> find(int category, int brand);
     @Insert("INSERT INTO food( category_id, brand_id) values (#{category},#{brand})")
     int insert(Food food);
+    @Select("SELECT name,id FROM category")
+    List<CategoryDTO> getCategoty();
+    @Select("SELECT name,id FROM brand")
+    List<BrandDTO> getBrand();
 }
