@@ -9,7 +9,7 @@ import java.math.BigDecimal;
  */
 @Data
 public class Cat {
-     private BigDecimal id;
+     private String id;
      private String name;
      private boolean sex;
      private String kind;
