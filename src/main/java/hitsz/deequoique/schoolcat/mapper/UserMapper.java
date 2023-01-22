@@ -1,9 +1,7 @@
 package hitsz.deequoique.schoolcat.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import hitsz.deequoique.schoolcat.controller.dto.UserDTO;
 import hitsz.deequoique.schoolcat.entity.User;
-import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 import org.springframework.stereotype.Repository;

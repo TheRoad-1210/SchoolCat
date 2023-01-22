@@ -1,8 +1,8 @@
 package hitsz.deequoique.schoolcat.controller;
 
 import hitsz.deequoique.schoolcat.common.Result;
-import hitsz.deequoique.schoolcat.controller.dto.record.MealRecordDTO;
-import hitsz.deequoique.schoolcat.controller.dto.record.MealRecordGetDTO;
+import hitsz.deequoique.schoolcat.entity.dto.record.MealRecordDTO;
+import hitsz.deequoique.schoolcat.entity.dto.record.MealRecordGetDTO;
 import hitsz.deequoique.schoolcat.entity.Food;
 import hitsz.deequoique.schoolcat.mapper.FoodMapper;
 import hitsz.deequoique.schoolcat.mapper.MealMapper;

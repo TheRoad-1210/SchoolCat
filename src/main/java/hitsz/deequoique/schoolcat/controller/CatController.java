@@ -1,8 +1,8 @@
 package hitsz.deequoique.schoolcat.controller;
 
 import hitsz.deequoique.schoolcat.common.Result;
-import hitsz.deequoique.schoolcat.controller.dto.CatDetailDTO;
-import hitsz.deequoique.schoolcat.controller.dto.CatHomeDTO;
+import hitsz.deequoique.schoolcat.entity.dto.CatDetailDTO;
+import hitsz.deequoique.schoolcat.entity.dto.CatHomeDTO;
 import hitsz.deequoique.schoolcat.entity.Cat;
 import hitsz.deequoique.schoolcat.mapper.CatMapper;
 import org.springframework.beans.factory.annotation.Autowired;

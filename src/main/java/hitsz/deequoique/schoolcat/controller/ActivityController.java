@@ -1,7 +1,7 @@
 package hitsz.deequoique.schoolcat.controller;
 
 import hitsz.deequoique.schoolcat.common.Result;
-import hitsz.deequoique.schoolcat.controller.dto.PostDTO;
+import hitsz.deequoique.schoolcat.entity.dto.PostDTO;
 import hitsz.deequoique.schoolcat.entity.Activity;
 import hitsz.deequoique.schoolcat.mapper.ActivityMapper;
 import lombok.extern.slf4j.Slf4j;

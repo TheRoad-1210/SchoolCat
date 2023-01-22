@@ -1,4 +1,4 @@
-package hitsz.deequoique.schoolcat.controller.dto;
+package hitsz.deequoique.schoolcat.entity.dto;
 
 import lombok.Data;
 

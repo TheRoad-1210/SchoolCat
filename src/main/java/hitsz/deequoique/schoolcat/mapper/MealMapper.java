@@ -1,6 +1,6 @@
 package hitsz.deequoique.schoolcat.mapper;
 
-import hitsz.deequoique.schoolcat.controller.dto.record.MealRecordDTO;
+import hitsz.deequoique.schoolcat.entity.dto.record.MealRecordDTO;
 import hitsz.deequoique.schoolcat.entity.MealRecord;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;

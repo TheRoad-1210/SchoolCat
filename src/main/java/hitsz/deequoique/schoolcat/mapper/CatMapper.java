@@ -1,6 +1,6 @@
 package hitsz.deequoique.schoolcat.mapper;
 
-import hitsz.deequoique.schoolcat.controller.dto.CatHomeDTO;
+import hitsz.deequoique.schoolcat.entity.dto.CatHomeDTO;
 import hitsz.deequoique.schoolcat.entity.Cat;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;

@@ -1,6 +1,6 @@
 package hitsz.deequoique.schoolcat.mapper;
 
-import hitsz.deequoique.schoolcat.controller.dto.PostDTO;
+import hitsz.deequoique.schoolcat.entity.dto.PostDTO;
 import hitsz.deequoique.schoolcat.entity.Activity;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;

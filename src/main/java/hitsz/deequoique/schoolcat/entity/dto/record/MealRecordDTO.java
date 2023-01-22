@@ -1,4 +1,4 @@
-package hitsz.deequoique.schoolcat.controller.dto.record;
+package hitsz.deequoique.schoolcat.entity.dto.record;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

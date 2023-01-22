@@ -1,4 +1,4 @@
-package hitsz.deequoique.schoolcat.controller.dto;
+package hitsz.deequoique.schoolcat.entity.dto;
 
 import hitsz.deequoique.schoolcat.common.CatStatus;
 import hitsz.deequoique.schoolcat.common.Sex;
@@ -49,7 +49,6 @@ public class CatDetailDTO {
                 status = "喵星";
             }
             default -> {
-                return;
             }
         }
     }

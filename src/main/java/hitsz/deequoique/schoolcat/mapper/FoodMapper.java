@@ -1,7 +1,7 @@
 package hitsz.deequoique.schoolcat.mapper;
 
-import hitsz.deequoique.schoolcat.controller.dto.BrandDTO;
-import hitsz.deequoique.schoolcat.controller.dto.CategoryDTO;
+import hitsz.deequoique.schoolcat.entity.dto.BrandDTO;
+import hitsz.deequoique.schoolcat.entity.dto.CategoryDTO;
 import hitsz.deequoique.schoolcat.entity.Food;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
