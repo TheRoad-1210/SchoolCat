@@ -35,8 +35,7 @@ public class UserController {
             }
         }
 
-        userMapper.insert(new User(user.getId(), user.getPassword(), false));
-        userMapper.add(user);
+        userMapper.insert(new User(user.getId(), user.getPassword(), user.getName(),user.getImage()));
         return Result.success();
     }
 
@@ -44,7 +43,7 @@ public class UserController {
     public Result login(@RequestBody UserDTO userDTO){
         for (User user:index()){
             if (user.getId().equals(userDTO.getId())){
-                if(Objects.equals(user.getPassword(), userDTO.getPassword())){
+                if(Objects.equals(user.getCode(), userDTO.getPassword())){
                     return Result.success();
                 }
                 else {

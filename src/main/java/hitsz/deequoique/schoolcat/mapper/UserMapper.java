@@ -1,10 +1,12 @@
 package hitsz.deequoique.schoolcat.mapper;
 
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import hitsz.deequoique.schoolcat.controller.dto.UserDTO;
 import hitsz.deequoique.schoolcat.entity.User;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
@@ -13,13 +15,9 @@ import java.util.List;
  * user与数据库连接类
  */
 @Mapper
-public interface UserMapper {
+@Repository
+public interface UserMapper extends BaseMapper<User> {
     @Select("SELECT * from user")
     List<User> findAll();
 
-    @Insert("INSERT INTO user VALUES (#{id},#{password},#{power})")
-    int insert(User user);
-
-    @Insert("INSERT INTO user_info(name,id,image) VALUE (#{name},#{id},#{image})")
-    int add(UserDTO user);
 }
